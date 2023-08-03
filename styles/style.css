@@ -1,0 +1,88 @@
+/*initialisation de la page*/
+
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+/* definition des couleurs de base*/
+body{
+      --color-primary:darkblue;
+      --color-secondary:rgb(8, 84, 198);
+      --color-tertiary:rgb(220, 244, 252);
+}
+
+/* body ...*/
+body
+{
+      background-color: var(--color-tertiary);
+      color: var(--color-tertiary);
+}
+
+/*elements du header*/
+
+header{
+      text-align: center;
+      margin:30px
+}
+
+h1 {
+      margin: 20px;
+      color: var(--color-primary);
+      font-family: 'Times New Roman', Times, serif; 
+      font-size: 5em;
+      font-weight: bolder;
+}
+
+h2 {
+      color:var(--color-secondary);
+      margin: 20px;
+}
+
+h3{
+      color: var(--color-secondary);
+      font-weight: lighter;
+}
+/*elements du footer*/
+
+footer{
+      margin: 20px;
+      background-color: var(--color-primary);
+      text-align: center;
+      color: var(--color-tertiary);
+      font-weight: bolder;
+
+}
+
+/*element du main*/
+main{
+      width: 50%;
+      margin: auto;
+      border-radius: 20px;
+      background-color: var(--color-primary);
+      text-align: center;
+      padding: 20px;
+}
+/* zone option*/
+.zone_options
+{
+      margin: 20px;
+}
+.option_source
+{
+      margin: 20px;
+}
+.option_source input{
+      margin-left: 20px;
+}
+/*zone proposition*/
+.zone_proposition{
+      margin: 20px;
+      background-color: var(--color-tertiary);
+      color: var(--color-primary);
+      border-radius: 20px;
+      font-size: 2.8em;
+}
+
+
