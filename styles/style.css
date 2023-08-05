@@ -18,6 +18,7 @@ body
 {
       background-color: var(--color-tertiary);
       color: var(--color-tertiary);
+      position: relative;
 }
 
 /*elements du header*/
@@ -47,11 +48,12 @@ h3{
 /*elements du footer*/
 
 footer{
-      margin: 20px;
+      margin: 30px;
       background-color: var(--color-primary);
       text-align: center;
       color: var(--color-tertiary);
       font-weight: bolder;
+      padding: 20px;
 
 }
 
@@ -84,5 +86,89 @@ main{
       border-radius: 20px;
       font-size: 2.8em;
 }
+/* zone de saisie */
+.zone_saisie{
+      margin: 20px;
+      display: grid;
+      grid-template-columns:1fr 1fr 1fr;
+      grid-template-rows:1fr;
+      gap: 20px;
+}
+.zone_saisie input 
+{
+      grid-column: 1/3;
+      border-radius: 20px;
+      font-size: 17px;
+      color: var(--color-primary);
+      
+}
+.zone_saisie button
+{
+      grid-column: 3/3;
+      border-radius: 10px;
+      font-size: 1.3em;
+      color: var(--color-secondary);
+}
+/*zone de score*/
+.zone_score 
+{
+      margin: 20px;
+      font-weight: bold;
+}
+/* zone de partage*/
+.zone_partage
+{
+      margin: 20px;
+}
+.zone_partage button{
+      font-size: 1.3em;
+      color: var(--color-secondary);
+      border-radius: 10px;
+}
 
-
+/*info partage background*/
+.info_partage_background
+{
+      
+      visibility: visible;
+}
+.partage
+{
+      padding: 20px;
+      font-size: 1em;
+      text-align: center;
+      background-color: var(--color-secondary);
+      width: 50%;
+      margin: auto;
+      margin-bottom: 20px;
+      border-radius: 15px;
+}
+.partage div 
+{
+      margin: 15px;
+      font-size: 1.3em;
+      font-weight: bold;
+}
+.partage input
+{
+      font-size: 20px;
+      border-radius: 20px;
+}
+.partage button
+{
+      margin: 10px;
+      font-size: 1.3em;
+      color: var(--color-primary);
+      border-radius: 10px;
+}
+.partage label
+{
+      margin-top: 10px;
+}
+form 
+{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+}
