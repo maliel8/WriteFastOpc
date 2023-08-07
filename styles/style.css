@@ -201,10 +201,13 @@ form
       }
 
       .zone_saisie input 
-{
-      font-size: 15px;
-      text-align: center;
+      {
+             font-size: 15px;
+             text-align: center;
       
-}
+      }
+      .zone_proposition{
+            font-size: 2em;
+      }
   }
       
