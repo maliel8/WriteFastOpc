@@ -1,5 +1,4 @@
-/*initialisation de la page*/
-
+/*general*/
 *{
       margin: 0;
       padding: 0;
@@ -133,7 +132,7 @@ main{
       position: absolute;
       top:50%;
       left: 50%;
-      margin: -100px -140px;
+      margin: -140px -155px;
           
 }
 .partage
@@ -192,10 +191,20 @@ form
           padding: 10px;
       }
       header h1{
-            font-size: 3em;
+            font-size: 2em;
             margin-left: 0;
             margin-right: 0;
 
       }
+      header h2,h3{
+            font-size: 1em;
+      }
+
+      .zone_saisie input 
+{
+      font-size: 15px;
+      text-align: center;
+      
+}
   }
       
