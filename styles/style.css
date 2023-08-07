@@ -128,10 +128,13 @@ main{
 }
 
 /*info partage background*/
-.info_partage_background
-{
-      
-      visibility: visible;
+#info_partage_background
+{ 
+      position: absolute;
+      top:50%;
+      left: 50%;
+      margin: -100px -140px;
+          
 }
 .partage
 {
@@ -139,9 +142,6 @@ main{
       font-size: 1em;
       text-align: center;
       background-color: var(--color-secondary);
-      width: 50%;
-      margin: auto;
-      margin-bottom: 20px;
       border-radius: 15px;
 }
 .partage div 
@@ -154,8 +154,10 @@ main{
 {
       font-size: 20px;
       border-radius: 20px;
+      color: var(--color-secondary);
+      text-align: center;
 }
-.partage button
+.partage #bouton_envoyer_mail
 {
       margin: 10px;
       font-size: 1.3em;
@@ -164,7 +166,7 @@ main{
 }
 .partage label
 {
-      margin-top: 10px;
+      margin-top: 10px;      
 }
 form 
 {
@@ -173,3 +175,27 @@ form
      justify-content: space-around;
      align-items: center;
 }
+.visible
+{
+      visibility: visible;
+}
+.invisible
+{
+      visibility:hidden;
+      
+}
+
+/* En dessous de 800 px */
+@media screen and (max-width: 800px) {
+      main {
+          width: 90%;
+          padding: 10px;
+      }
+      header h1{
+            font-size: 3em;
+            margin-left: 0;
+            margin-right: 0;
+
+      }
+  }
+      
