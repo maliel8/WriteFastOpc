@@ -71,7 +71,7 @@ function lancer_jeu()
             let email = bali_email.value;
             let bali_sujet = document.getElementById('message');
             let sujet = bali_sujet.value;
-            sujet +=" sur:` http://www.google.com";
+            sujet +=" sur:` http://maliel8.github.io/WriteFastOpc/";
             let score_p = score+"/"+i;
             console.log(score_p)
            affiche_email(nom,email,sujet,score_p);
