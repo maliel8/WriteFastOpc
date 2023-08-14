@@ -64,15 +64,17 @@
         <div class="invisible" id="info_partage_background" >
             <div class="partage">
                   <div>partager votre score</div>
-                  <form>
+                  <form novalidate>
                         <label for="nom">votre nom</label>
                         <input type="text" id="nom" name="nom" placeholder="votre nom">
                         <label for="email"> avec qui voulez vous partager <br>votre score ! </label>
                         <input type="email" id="email" name="email" placeholder="nom@domaine.com">
                         <label for="message">petit mot pour lui !</label>
                         <input type="text" id="message" name="message" value ="">
-                        <input type="submit" id="bouton_envoyer_mail" value="envoyer">
+                        <input type="submit" id="bouton_envoyer_mail" value="envoyer"><br>
+                        <span id="sms"></span>
                   </form>
+                  
             </div>
       </div>
       <!-- fin-->

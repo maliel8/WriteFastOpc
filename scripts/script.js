@@ -3,6 +3,7 @@
 // c'est la fonction principale
 function lancer_jeu() 
 {
+     
       liste_proposition = liste_mots;
       let score = 0;
       let i = 0;
@@ -60,11 +61,29 @@ function lancer_jeu()
             zone_partage.setAttribute("class","visible");
             console.log(zone_partage)
       })
+
+      // fonction de validation
+      let bali_nom = document.getElementById("nom")
+      bali_nom.addEventListener("change",(event)=>{
+            est_vide(event.target);
+            valide_nom(event.target);
+      });
+let bali_email = document.getElementById("email");
+      bali_email.addEventListener("input",()=>{
+            est_vide(bali_email)
+            validate_email(bali_email);
+      });
+let bali_sujet = document.getElementById('message');
+      bali_sujet.addEventListener("input",()=>{
+            validate_petit_mot(bali_sujet);
+      });
+
       /*partage */
       let bouton_submit =document.querySelector("form");
       bouton_submit.addEventListener("submit",(event)=>{
 
             event.preventDefault();
+
             let bali_nom = document.getElementById("nom");
             let nom = bali_nom.value;
             let bali_email = document.getElementById("email");
@@ -73,11 +92,69 @@ function lancer_jeu()
             let sujet = bali_sujet.value;
             sujet +=" sur:` http://maliel8.github.io/WriteFastOpc/";
             let score_p = score+"/"+i;
-            console.log(score_p)
-           affiche_email(nom,email,sujet,score_p);
-      })
+             
+            let parent = document.getElementById("sms");
+           if(if_class_exist(bali_nom)&&if_class_exist(bali_email)&&if_class_exist(bali_sujet))
+           {
+                  parent.value="";
+                  affiche_email(nom,email,sujet,score_p);
+           }else
+           {
+            let div = `
+            <span> veuillez  remplir tout les champs svp !! </span>
+            `
+            parent.innerHTML = div;
+           }
+            
+           
+      });
+
+       
       
       affiche_resultat(score,i);
+}
+/*fonctions de verifications  */
+function valide_nom(nom)
+{
+      let reg = new RegExp("([a-z0-9._-]{3})");
+      let test = reg.test(nom.value);// test de la value de nom avec notre regexp
+      teste(nom,test);
+}
+function validate_email(email)
+{
+      let reg = new RegExp("^[a-z0-9._-]+@[a-z0-9._-]+\\.[a-z0-9.-_]+$");
+      let test = reg.test(email.value);
+      teste(email,test);
+     
+}
+function validate_petit_mot(mot) {
+      let reg = new RegExp("[a-z0-9.-_]{5}");
+      let test = reg.test(mot.value);
+      teste(mot,test);
+}
+
+// on verifie si les balise contienne la classe success
+function if_class_exist(champ)
+{
+      if(champ.classList.contains('success'))
+      {
+            return true;
+      }
+}
+function teste (vari,test)
+{
+      if (test === true) {
+            vari.classList.add("success");
+            vari.classList.remove("failure");
+      } else {
+           vari.classList.add("failure");
+           vari.classList.remove("success");
+      }
+}
+function est_vide(champ)
+{
+      let test = champ.value.trim();
+      teste(champ,test);
 }
 /*fonction affiche email par opc */
 
